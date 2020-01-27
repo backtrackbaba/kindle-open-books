@@ -32,8 +32,8 @@ class AOSABook(BasicNewsRecipe):
         soup = self.index_to_soup(self.url_prefix + 'index.html')
 
         tables = soup.findAll('table')
-        articles_vol1 = self.generate_vol(tables[1])
-        articles_vol2 = self.generate_vol(tables[0])
+        articles_vol1 = self.generate_vol(tables[3])
+        articles_vol2 = self.generate_vol(tables[2])
 
         volumes = [('Volume1', articles_vol1), ('Volume2', articles_vol2)]
 
